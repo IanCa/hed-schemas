@@ -21,11 +21,6 @@ Each term in this vocabulary has a human-readable description and may include ad
             <attribute>
                <name>suggestedTag</name>
                <value>Task-event-role</value>
-               <value>Sensory-presentation</value>
-            </attribute>
-            <attribute>
-               <name>hedId</name>
-               <value>HED_0012002</value>
             </attribute>
          </node>
          <node>
