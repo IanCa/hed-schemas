@@ -192,7 +192,6 @@ For more information see https://hed-schema-library.readthedocs.io/en/latest/ind
 ***  <nowiki># {takesValue, valueClass=textClass} [Free text.]</nowiki>
 ** Finding-propagation <nowiki>{suggestedTag=Body-part, suggestedTag=Sensors} [When propagation within the graphoelement is observed, first the location of the onset region is scored. Then, the location of the propagation can be noted.]</nowiki>
 ***  <nowiki># {takesValue, valueClass=textClass} [Free text.]</nowiki>
-**** Bad-child
 ** Multifocal-finding <nowiki>{suggestedTag=Property-not-possible-to-determine} [When the same interictal graphoelement is observed bilaterally and at least in three independent locations, can score them using one entry, and choosing multifocal as a descriptor of the locations of the given interictal graphoelements, optionally emphasizing the involved, and the most active sites.]</nowiki>
 ***  <nowiki># {takesValue, valueClass=textClass} [Free text.]</nowiki>
 * Modulators-property <nowiki>{} [For each described graphoelement, the influence of the modulators can be scored. Only modulators present in the recording are scored. (Source: Beniczky ea 2017, Section 10.)]</nowiki>
