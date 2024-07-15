@@ -3,7 +3,20 @@
 # only applies to branches that start with develop-
 
 # Get the current branch name
-branch_name=$(git rev-parse --abbrev-ref HEAD)
+# Function to get branch name
+get_branch_name() {
+  # Check for CI environment variable for GitHub Actions
+  if [ -n "$GITHUB_REF" ]; then
+    # GitHub Actions environment, extract branch name
+    echo "$GITHUB_REF" | sed 's|refs/heads/||'
+  else
+    # Not in CI or unknown CI, use git command
+    git rev-parse --abbrev-ref HEAD
+  fi
+}
+
+# Get the branch name using the function
+branch_name=$(get_branch_name)
 
 # Echo the branch name
 echo "branch_name: $branch_name"
