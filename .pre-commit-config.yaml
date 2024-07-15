@@ -8,3 +8,4 @@ repos:
         types: [file]
         pass_filenames: true
         always_run: true
+        verbose: true
