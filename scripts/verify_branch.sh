@@ -15,6 +15,8 @@ get_branch_name() {
     # Attempt to find a branch from the remotes that points to the current commit
     branch_name=$(git branch -r --contains HEAD | grep -v HEAD | sed -n 's|origin/||p' | head -n 1)
   fi
+
+  echo "$branch_name"
 }
 
 # Get the branch name using the function
