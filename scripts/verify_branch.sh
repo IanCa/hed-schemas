@@ -3,15 +3,17 @@
 # only applies to branches that start with develop-
 
 # Get the current branch name
-# Function to get branch name
 get_branch_name() {
-  # Check for CI environment variable for GitHub Actions
-  if [ -n "$GITHUB_REF" ]; then
-    # GitHub Actions environment, extract branch name
-    echo "$GITHUB_REF" | sed 's|refs/heads/||'
-  else
-    # Not in CI or unknown CI, use git command
-    git rev-parse --abbrev-ref HEAD
+  # First try to get the branch name using the simplest command
+  branch_name=$(git rev-parse --abbrev-ref HEAD)
+
+  # Check if the result is 'HEAD', which means it's in a detached HEAD state
+  if [ "$branch_name" = "HEAD" ]; then
+    # Since we're in a detached HEAD state, fetch the branches and find the correct one
+    git fetch --depth=1 origin +refs/heads/*:refs/remotes/origin/*
+
+    # Attempt to find a branch from the remotes that points to the current commit
+    branch_name=$(git branch -r --contains HEAD | grep -v HEAD | sed -n 's|origin/||p' | head -n 1)
   fi
 }
 
