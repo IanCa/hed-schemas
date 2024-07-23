@@ -56,7 +56,7 @@ jobs:
 
       - name: Update schemas
         run: |
-            hed_add_ids hed-schemas "${{ github.event.inputs.schema_name }}" "${{ github.event.inputs.schema_version }}"
+            hed_add_ids . "${{ github.event.inputs.schema_name }}" "${{ github.event.inputs.schema_version }}"
 
       - name: Commit and push changes
         run: |
