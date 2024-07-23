@@ -1,11 +1,14 @@
-name: Create PR from Develop
+name: Add HedIDs
 
 on:
   workflow_dispatch:
     inputs:
       schema_name:
-        description: 'The full name of the schema(including version)'
-        default: 'HED8.4.0'
+        description: 'The name of the schema("standard" for standard schema)'
+        default: ''
+      schema_version:
+        description: 'The schema version to convert'
+        required: true
       pr_title:
         description: 'Pull Request Title'
         required: true
