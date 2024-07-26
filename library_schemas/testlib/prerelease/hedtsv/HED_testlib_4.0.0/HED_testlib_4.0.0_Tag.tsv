@@ -1,0 +1,16 @@
+hedId	rdfs:label	Level	omn:SubClassOf	Attributes	dc:description	omn:EquivalentTo
+	D-nonextension	0	HedTag			HedTag and (inHedSchema some TestlibSchema)
+	SubnodeD3	1	D-nonextension			
+	SubnodeD1	1	D-nonextension			
+	SubnodeD2	1	D-nonextension			
+	Base-sound	0	Instrument-sound	rooted=Instrument-sound		
+	Base-subsound1	1	Base-sound			
+	Base-subsound2	1	Base-sound			
+	Piano-sound	0	Instrument-sound	rooted=Instrument-sound		
+	Piano-subsound	1	Piano-sound			
+	Piano-subsound1	1	Piano-sound			
+	Piano-subsound2	1	Piano-sound			
+	E-extensionallowed	0	HedTag	extensionAllowed		HedTag and (extensionAllowed value true) and (inHedSchema some TestlibSchema)
+	SubnodeE1	1	E-extensionallowed			
+	SubnodeE2	1	E-extensionallowed			
+	SubnodeE3	1	E-extensionallowed			
