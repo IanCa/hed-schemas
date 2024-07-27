@@ -6,7 +6,7 @@ This schema is designed to be lazy partnered with prerelease 8.3.0.
 !# start schema
 
 '''Piano-sound''' <nowiki>{rooted=Instrument-sound}</nowiki>
-* Piano-subsound
+* Piano-subsound3
 * Piano-subsound1
 * Piano-subsound2
 
